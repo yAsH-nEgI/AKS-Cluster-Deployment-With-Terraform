@@ -1,0 +1,5 @@
+rgname                 = "aks-terraform"
+location               = "eastus"
+service_principal_name = "Terraform_AKS"
+SUB_ID                 = "a068e11b-1702-45e4-ae9c-c69d99981337"
+keyvault_name          = "aks-tf-kv"
