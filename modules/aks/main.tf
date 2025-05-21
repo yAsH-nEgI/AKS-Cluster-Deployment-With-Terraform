@@ -1,8 +1,3 @@
-# Datasource to get Latest Azure AKS latest Version
-# Check if there is a var with the version name , if not , use the 
-# latest version, if there is a var, use that version
-# make sure the version specified in var is valid
-
 data "azurerm_kubernetes_service_versions" "current" {
   location = var.location
   include_preview = false  
@@ -10,7 +5,7 @@ data "azurerm_kubernetes_service_versions" "current" {
  
 
 resource "azurerm_kubernetes_cluster" "aks-cluster" {
-  name                  = "techtutorialwithpiyush-aks-cluster"
+  name                  = "aks-cluster-tf"
   location              = var.location
   resource_group_name   = var.resource_group_name
   dns_prefix            = "${var.resource_group_name}-cluster"           
